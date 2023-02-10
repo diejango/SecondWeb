@@ -1,2 +1,2 @@
-# SecondWeb
-my second website
+# myblog
+Proyecto Blog Personal Curso Django
