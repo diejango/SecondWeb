@@ -1,5 +1,6 @@
 from django.db import models
 from model_utils.models import TimeStampedModel
+from .managers import FavoritesManager
 # Create your models here.
 from applications.entrada.models import Entry
 from django.conf import settings
@@ -15,6 +16,7 @@ class Favorites(TimeStampedModel):
         related_name='entry_favorites',
         on_delete=models.CASCADE,
     )
+    objects=FavoritesManager()
 
     class Meta:
         unique_together=('user','entry')
